@@ -1,0 +1,74 @@
+/* FULL SCREEN BACKGROUND */
+.phone-shell-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PHONE BODY */
+.phone-shell {
+  width: 390px;
+  height: 844px;
+  background: #000;
+  border-radius: 36px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  z-index: 9999999999999999999999999;
+  position: relative;
+}
+
+/* TOP BAR */
+.notification-bar {
+  height: 5%;
+  min-height: 40px;
+  background: #111;
+}
+
+/* MAIN VIEWPORT */
+.phone-viewport {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 85%; 
+  padding-top: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+/* BOTTOM NAV BAR */
+.navigation-bar {
+  height: 5%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation-bar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* RESPONSIVE SCALING FOR SMALL SCREENS */
+@media (max-width: 420px) {
+  .phone-shell {
+    width: 100vw;
+    height: calc(100vw * (844 / 390));
+  }
+}
+
+@media (max-height: 900px) and (min-width: 421px) {
+  .phone-shell {
+    height: 90vh;
+    width: calc(90vh * (390 / 844));
+  }
+}
+

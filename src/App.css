@@ -1,0 +1,25 @@
+.phone-shell {
+  width: 360px;
+  height:700px;
+
+  background-image: url("wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 6px #111,
+    0 20px 60px rgba(0, 0, 0, 0.8);
+
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .phone-shell {
+  width:100%;
+  height:100%;
+  }
+}

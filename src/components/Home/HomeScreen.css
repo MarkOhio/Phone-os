@@ -1,0 +1,153 @@
+/* HomeScreen.css */
+
+.home-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:url(wallpaper.jpg);
+  background-size: cover;
+  user-select: none;
+}
+
+/* ---------------- BODY ---------------- */
+
+.home-body {
+  position: absolute;
+  top: 0;
+  bottom: 70px; /* space for dock */
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-pages {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s ease-out;
+}
+
+.home-page {
+  flex: 0 0 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+.section {
+  margin-bottom: 12px;
+}
+
+.widget-full {
+  height: 90px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.widget.span-2 {
+  grid-column: span 2;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.full-page {
+  height: 100%;
+  align-content: flex-start;
+}
+
+/* ---------------- APPS ---------------- */
+
+.app-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.app-slot img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* ---------------- DOCK ---------------- */
+
+.dock {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 26px;
+}
+
+.dock-app {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dock-app img {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+/* ---------------- TOOLTIP ---------------- */
+
+.app-tooltip {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 50;
+}
+
+.app-tooltip button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.app-tooltip button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------------- TRANSITIONS ---------------- */
+
+.home-pages,
+.app-slot,
+.dock,
+.app-tooltip {
+  -webkit-tap-highlight-color: transparent;
+}

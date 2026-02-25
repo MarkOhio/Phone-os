@@ -1,0 +1,201 @@
+/* notificationBar.css */
+
+/* ---------------- GLOBAL BAR ---------------- */
+
+.notification-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  user-select: none;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+/* ---------------- COLLAPSED ---------------- */
+
+.nb-collapsed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.5);
+  height:90%;
+}
+
+.nb-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nb-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.notif-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+}
+
+.nb-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* placeholders for signal/wifi */
+.signal,
+.wifi {
+  width: 20px;
+  height: 14px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* ---------------- NOTIFICATIONS PANEL ---------------- */
+
+.nb-notifications {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(77, 77, 77);
+ 
+  padding: 12px;
+  height: 100vh;
+}
+
+.nb-notifications header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notif-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.notif-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.notif-item .title {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.notif-item .subtitle {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.notif-item .time {
+  margin-left: auto;
+  font-size: 11px;
+  color: #999;
+}
+
+.nb-notifications button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 6px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------------- ACTION PANEL ---------------- */
+
+.nb-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(30, 30, 30);
+  background: rgb(77, 77, 77);
+ 
+  padding: 12px;
+  height: 100vh;
+}
+
+.nb-actions header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.actions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.action {
+  flex: 0 0 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.action.active {
+  background: #1e90ff;
+}
+
+.fake-slider {
+  height: 28px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.fake-slider .track {
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 14px;
+}

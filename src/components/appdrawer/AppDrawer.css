@@ -1,0 +1,98 @@
+
+.app-drawer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 95%; /* leave bottom 5% for swipe/navigation */
+  background-color: rgba(0, 0, 0, 0.95);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: auto;
+  z-index: 1500;
+}
+
+.app-drawer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.2s;
+  color: white;
+}
+
+.app-drawer-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.app-drawer-icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 5px;
+}
+
+.tooltip {
+  position: fixed;
+  background: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2000;
+}
+
+.tooltip button {
+  background: #555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tooltip button:hover {
+  background: #777;
+}
+
+.uninstall-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2500;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background: #555;
+  color: #fff;
+}
